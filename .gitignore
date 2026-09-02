@@ -1,0 +1,46 @@
+# Environment
+.env
+*.env
+.venv/
+venv/
+env/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Flask / Migrations
+instance/
+.webassets-cache
+
+# Database
+*.sqlite3
+*.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Testing / Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Migrations working files (keep versions folder tracked, ignore cache)
+migrations/__pycache__/
