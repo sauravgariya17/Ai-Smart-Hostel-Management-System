@@ -6,7 +6,7 @@ from datetime import timedelta
 from dotenv import load_dotenv
 from urllib.parse import quote_plus
 
-# Load variables from a .env file located at the project root (if present).
+# Load variables from a .env file located at the project root
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 load_dotenv(os.path.join(BASE_DIR, ".env"))
 
@@ -94,7 +94,7 @@ class BaseConfig:
     DEFAULT_ADMIN_EMAIL = os.environ.get("DEFAULT_ADMIN_EMAIL", "admin@hostel.com")
     DEFAULT_ADMIN_PASSWORD = os.environ.get("DEFAULT_ADMIN_PASSWORD", "Admin@12345")
 
-    # ---- Session 3: AI / ML model & dataset locations ----
+    # ----AI / ML model & dataset locations ----
     # Trained model artifacts (.joblib) produced by the scripts in ml/ and
     # loaded at runtime by app/ai/services/*. Kept outside the app package
     # since they are build artifacts, not application source code.

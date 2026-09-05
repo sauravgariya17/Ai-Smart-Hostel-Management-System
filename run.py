@@ -1,15 +1,7 @@
-"""
-run.py
---------
-Convenience script for local development:
+#===============================================================================
+#       python run.py
+#===============================================================================
 
-    python run.py
-
-Reads HOST/PORT/DEBUG from environment variables (falling back to sane
-defaults) and starts Flask's built-in development server. Production
-deployments should use a WSGI server (gunicorn) pointed at app.py
-instead of this script.
-"""
 
 import os
 
