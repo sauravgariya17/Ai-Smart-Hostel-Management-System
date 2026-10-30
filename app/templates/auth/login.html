@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block title %}Sign In · Smart Hostel Management System{% endblock %}
+{% block body_class %}auth-body{% endblock %}
+
+{% block content %}
+<div class="auth-shell">
+
+    <section class="auth-visual d-none d-lg-flex">
+        <div class="auth-visual-inner">
+            <span class="brand-mark brand-mark-lg"><i class="bi bi-building"></i></span>
+            <h2>Hostel<span class="accent">OS</span></h2>
+            <p class="lead-text">One connected system for admins, wardens, and students — room allocation, attendance, complaints, and AI-assisted insights, all in one place.</p>
+
+            <ul class="visual-points">
+                <li><i class="bi bi-shield-check"></i> Role-based secure access</li>
+                <li><i class="bi bi-graph-up-arrow"></i> Real-time occupancy &amp; reports</li>
+                <li><i class="bi bi-chat-dots"></i> Faster complaint resolution</li>
+            </ul>
+        </div>
+        <div class="auth-visual-glow"></div>
+    </section>
+
+    <section class="auth-form-panel">
+        <div class="auth-card">
+            <div class="auth-card-header">
+                <span class="brand-mark d-lg-none"><i class="bi bi-building"></i></span>
+                <h1>Welcome back</h1>
+                <p>Sign in to continue to your dashboard</p>
+            </div>
+
+            <ul class="role-tabs nav nav-pills mb-4" id="roleTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="role-tab active" data-role="admin" type="button">
+                        <i class="bi bi-person-gear"></i><span>Admin</span>
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="role-tab" data-role="warden" type="button">
+                        <i class="bi bi-person-badge"></i><span>Warden</span>
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="role-tab" data-role="student" type="button">
+                        <i class="bi bi-mortarboard"></i><span>Student</span>
+                    </button>
+                </li>
+            </ul>
+
+            <div id="loginAlert" class="alert d-none" role="alert"></div>
+
+            <form id="loginForm" novalidate>
+                <input type="hidden" id="loginRole" value="admin">
+
+                <div class="mb-3">
+                    <label for="loginEmail" class="form-label">Email address</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                        <input type="email" class="form-control" id="loginEmail" placeholder="you@hostel.com" required>
+                    </div>
+                </div>
+
+                <div class="mb-2">
+                    <label for="loginPassword" class="form-label">Password</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                        <input type="password" class="form-control" id="loginPassword" placeholder="••••••••" required>
+                        <button class="input-group-text toggle-password" type="button" data-target="loginPassword">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">Remember me</label>
+                    </div>
+                    <a href="{{ url_for('main.forgot_password_page') }}" class="link-accent">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary-accent w-100" id="loginSubmitBtn">
+                    <span class="btn-text">Sign In</span>
+                    <span class="spinner-border spinner-border-sm d-none" role="status"></span>
+                </button>
+            </form>
+
+            <p class="auth-footer-text">
+                New student? <a href="{{ url_for('main.student_register_page') }}" class="link-accent" id="showStudentRegisterHint">Register here</a>
+            </p>
+        </div>
+    </section>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+{% endblock %}

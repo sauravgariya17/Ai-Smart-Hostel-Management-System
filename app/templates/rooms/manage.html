@@ -1,0 +1,67 @@
+{% extends "layouts/module_page.html" %}
+{% block title %}Rooms · Smart Hostel Management System{% endblock %}
+{% block page_title %}Room Management{% endblock %}
+
+{% block module_content %}
+<div class="module-tabs" id="roomModuleTabs">
+    <button class="module-tab active" data-pane="roomsPane">Rooms</button>
+    <button class="module-tab" data-pane="allocationsPane">Allocations</button>
+    <button class="module-tab" data-pane="transfersPane">Transfer Requests</button>
+    <button class="module-tab" data-pane="availabilityPane">Availability</button>
+</div>
+
+<div class="module-tab-pane active" id="roomsPane">
+    <div id="roomsApp"></div>
+</div>
+
+<div class="module-tab-pane" id="allocationsPane">
+    <div id="allocationsApp"></div>
+</div>
+
+<div class="module-tab-pane" id="transfersPane">
+    <div class="panel-card">
+        <div class="panel-card-header">
+            <h5 class="mb-0">Room Transfer Requests</h5>
+            <small class="text-muted">Approve or reject student-initiated room transfer requests</small>
+        </div>
+        <div class="panel-card-body">
+            <div id="transfersAlert" class="alert d-none"></div>
+            <div class="table-responsive">
+                <table class="table table-hover align-middle crud-table">
+                    <thead>
+                        <tr>
+                            <th>Student</th><th>Current Room</th><th>Requested Room</th>
+                            <th>Reason</th><th>Status</th><th class="text-end">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transfersTableBody">
+                        <tr><td colspan="6" class="text-center text-muted py-4">Loading…</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="module-tab-pane" id="availabilityPane">
+    <div class="panel-card">
+        <div class="panel-card-header d-flex flex-wrap align-items-center justify-content-between gap-2">
+            <h5 class="mb-0">Room Availability</h5>
+            <select class="form-select form-select-sm" id="availabilityRoomTypeFilter" style="max-width: 200px;">
+                <option value="all">All Room Types</option>
+                <option value="single">Single</option>
+                <option value="double">Double</option>
+                <option value="triple">Triple</option>
+                <option value="dormitory">Dormitory</option>
+            </select>
+        </div>
+        <div class="panel-card-body">
+            <div class="row g-3" id="availabilityGrid"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block module_scripts %}
+<script src="{{ url_for('static', filename='js/modules/rooms.js') }}"></script>
+{% endblock %}

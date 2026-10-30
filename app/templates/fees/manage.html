@@ -1,0 +1,104 @@
+{% extends "layouts/module_page.html" %}
+{% block title %}Fees · Smart Hostel Management System{% endblock %}
+{% block page_title %}Fee Management{% endblock %}
+
+{% block module_content %}
+<div class="module-tabs" id="feeModuleTabs">
+    <button class="module-tab active" data-pane="structuresPane">Fee Structures</button>
+    <button class="module-tab" data-pane="invoicesPane">Invoices</button>
+    <button class="module-tab" data-pane="paymentsPane">Payment History</button>
+    <button class="module-tab" data-pane="riskPane"><i class="bi bi-stars"></i> AI Risk</button>
+</div>
+
+<div class="module-tab-pane active" id="structuresPane">
+    <div id="feeStructuresApp"></div>
+</div>
+
+<div class="module-tab-pane" id="invoicesPane">
+    <div id="invoicesApp"></div>
+    <div class="panel-card mt-3" id="recordPaymentCard">
+        <div class="panel-card-header">
+            <h5 class="mb-0">Record a Payment</h5>
+            <small class="text-muted">Apply a payment against an invoice ID from the table above</small>
+        </div>
+        <div class="panel-card-body">
+            <div id="paymentFormAlert" class="alert d-none"></div>
+            <form id="recordPaymentForm" class="row g-3">
+                <div class="col-sm-3">
+                    <label class="form-label">Invoice ID</label>
+                    <input type="number" class="form-control" name="student_fee_id" required>
+                </div>
+                <div class="col-sm-3">
+                    <label class="form-label">Amount</label>
+                    <input type="number" step="0.01" class="form-control" name="amount" required>
+                </div>
+                <div class="col-sm-3">
+                    <label class="form-label">Payment Mode</label>
+                    <select class="form-select" name="payment_mode" required>
+                        <option value="cash">Cash</option>
+                        <option value="card">Card</option>
+                        <option value="upi">UPI</option>
+                        <option value="bank_transfer">Bank Transfer</option>
+                        <option value="cheque">Cheque</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <label class="form-label">Transaction Ref.</label>
+                    <input type="text" class="form-control" name="transaction_reference">
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary-accent btn-sm" id="recordPaymentBtn">
+                        <span class="btn-text">Record Payment</span>
+                        <span class="spinner-border spinner-border-sm d-none"></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="module-tab-pane" id="paymentsPane">
+    <div id="paymentsApp"></div>
+</div>
+
+<div class="module-tab-pane" id="riskPane">
+    <div class="panel-card">
+        <div class="panel-card-header d-flex align-items-center justify-content-between">
+            <div>
+                <h5 class="mb-0">Fee Defaulter Risk Prediction</h5>
+                <small class="text-muted">Students flagged by AI as at risk of becoming fee defaulters</small>
+            </div>
+            <span class="ai-chip"><i class="bi bi-stars"></i> AI decision-support</span>
+        </div>
+        <div class="panel-card-body">
+            <div class="ai-disclaimer" id="riskDisclaimer">
+                <i class="bi bi-info-circle"></i>
+                <span>This is an AI-generated risk estimate for staff review — not an automatic decision. Always verify with the student's actual records.</span>
+            </div>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+                <select class="form-select form-select-sm" id="riskLevelFilter" style="max-width: 180px;">
+                    <option value="all">All Risk Levels</option>
+                    <option value="high">High Risk</option>
+                    <option value="medium">Medium Risk</option>
+                    <option value="low">Low Risk</option>
+                </select>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover align-middle crud-table">
+                    <thead>
+                        <tr>
+                            <th>Student</th><th>Roll No.</th><th>Total Due</th><th>% Paid</th>
+                            <th>Max Days Overdue</th><th>Overdue Invoices</th><th>Risk Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="riskTableBody"><tr><td colspan="7" class="text-center text-muted py-4">Loading…</td></tr></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block module_scripts %}
+<script src="{{ url_for('static', filename='js/modules/fees.js') }}"></script>
+{% endblock %}

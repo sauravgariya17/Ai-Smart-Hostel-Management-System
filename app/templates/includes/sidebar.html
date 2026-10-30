@@ -1,0 +1,68 @@
+<aside class="sidebar" id="appSidebar">
+    <div class="sidebar-brand">
+        <span class="brand-mark"><i class="bi bi-building"></i></span>
+        <div class="brand-text">
+            <strong>Hostel<span class="accent">OS</span></strong>
+            <small>Smart Management</small>
+        </div>
+    </div>
+
+    <nav class="sidebar-nav">
+        <span class="nav-section-label">Main</span>
+        <a href="{{ url_for('main.dashboard_page') }}" class="nav-link" id="navDashboardLink">
+            <i class="bi bi-grid-1x2"></i><span>Dashboard</span>
+        </a>
+        <a href="{{ url_for('main.notifications_page') }}" class="nav-link">
+            <i class="bi bi-bell"></i><span>Notifications</span>
+        </a>
+
+        <!-- Admin-only navigation -->
+        <div data-role-nav="admin" class="role-nav-group d-none">
+            <span class="nav-section-label">Administration</span>
+            <a href="{{ url_for('main.students_page') }}" class="nav-link"><i class="bi bi-people"></i><span>Students</span></a>
+            <a href="{{ url_for('main.wardens_page') }}" class="nav-link"><i class="bi bi-person-badge"></i><span>Wardens</span></a>
+            <a href="{{ url_for('main.hostels_page') }}" class="nav-link"><i class="bi bi-building"></i><span>Hostels</span></a>
+            <a href="{{ url_for('main.rooms_page') }}" class="nav-link"><i class="bi bi-door-open"></i><span>Rooms</span></a>
+            <a href="{{ url_for('main.fees_page') }}" class="nav-link"><i class="bi bi-credit-card"></i><span>Fees</span></a>
+            <a href="{{ url_for('main.reports_page') }}" class="nav-link"><i class="bi bi-bar-chart"></i><span>Reports</span></a>
+
+            <span class="nav-section-label">Operations</span>
+            <a href="{{ url_for('main.visitors_page') }}" class="nav-link"><i class="bi bi-person-walking"></i><span>Visitors</span></a>
+            <a href="{{ url_for('main.attendance_page') }}" class="nav-link"><i class="bi bi-clipboard-check"></i><span>Attendance</span></a>
+            <a href="{{ url_for('main.complaints_page') }}" class="nav-link"><i class="bi bi-exclamation-circle"></i><span>Complaints</span></a>
+            <a href="{{ url_for('main.maintenance_page') }}" class="nav-link"><i class="bi bi-tools"></i><span>Maintenance</span></a>
+        </div>
+
+        <!-- Warden-only navigation -->
+        <div data-role-nav="warden" class="role-nav-group d-none">
+            <span class="nav-section-label">Warden Tools</span>
+            <a href="{{ url_for('main.rooms_page') }}" class="nav-link"><i class="bi bi-door-open"></i><span>Rooms</span></a>
+            <a href="{{ url_for('main.attendance_page') }}" class="nav-link"><i class="bi bi-clipboard-check"></i><span>Attendance</span></a>
+            <a href="{{ url_for('main.complaints_page') }}" class="nav-link"><i class="bi bi-exclamation-circle"></i><span>Complaints</span></a>
+            <a href="{{ url_for('main.visitors_page') }}" class="nav-link"><i class="bi bi-person-walking"></i><span>Visitors</span></a>
+            <a href="{{ url_for('main.maintenance_page') }}" class="nav-link"><i class="bi bi-tools"></i><span>Maintenance</span></a>
+            <a href="{{ url_for('main.fees_page') }}" class="nav-link"><i class="bi bi-credit-card"></i><span>Fees</span></a>
+        </div>
+
+        <!-- Student-only navigation -->
+        <div data-role-nav="student" class="role-nav-group d-none">
+            <span class="nav-section-label">My Hostel</span>
+            <a href="{{ url_for('main.rooms_page') }}" class="nav-link"><i class="bi bi-door-closed"></i><span>My Room</span></a>
+            <a href="{{ url_for('main.fees_page') }}" class="nav-link"><i class="bi bi-credit-card"></i><span>Fee &amp; Payments</span></a>
+            <a href="{{ url_for('main.complaints_page') }}" class="nav-link"><i class="bi bi-chat-square-dots"></i><span>My Complaints</span></a>
+            <a href="{{ url_for('main.attendance_page') }}" class="nav-link"><i class="bi bi-calendar-check"></i><span>My Attendance</span></a>
+            <a href="{{ url_for('main.visitors_page') }}" class="nav-link"><i class="bi bi-person-walking"></i><span>My Visitors</span></a>
+        </div>
+
+        <span class="nav-section-label">Account</span>
+        <a href="#" class="nav-link"><i class="bi bi-person-circle"></i><span>Profile</span></a>
+        <a href="#" class="nav-link"><i class="bi bi-shield-lock"></i><span>Security</span></a>
+    </nav>
+
+    <div class="sidebar-footer">
+        <div class="ai-badge">
+            <i class="bi bi-stars"></i>
+            <span>AI Insights Ready</span>
+        </div>
+    </div>
+</aside>

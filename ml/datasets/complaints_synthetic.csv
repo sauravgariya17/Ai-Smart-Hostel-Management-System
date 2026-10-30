@@ -1,0 +1,491 @@
+text,category,priority
+Power socket near the study table is sparking. No rush at all.,electrical,low
+The tube light keeps flickering all night. Whenever convenient.,electrical,low
+Power socket near the study table is sparking. Requesting maintenance to check this.,electrical,medium
+Power socket near the study table is sparking. Please look into this when you get a chance.,electrical,medium
+The fan in my room is not working. Small inconvenience.,electrical,low
+The fan in my room is not working. Requesting maintenance to check this.,electrical,medium
+The charging point in my room is dead. Just a small request.,electrical,low
+The room's main switch board is not working. This is extremely urgent.,electrical,high
+There is no electricity in the corridor since morning. This needs to be fixed soon.,electrical,medium
+The room's main switch board is not working. Not a big deal.,electrical,low
+Short circuit near the washroom light. Happens only occasionally.,electrical,low
+Power socket near the study table is sparking. This needs to be fixed soon.,electrical,medium
+"The room's main switch board is not working. This cannot wait, please act now.",electrical,high
+The ceiling light bulb has fused. Please arrange for a repair.,electrical,medium
+Power socket near the study table is sparking. Requesting maintenance to check this.,electrical,medium
+Short circuit near the washroom light. Please look into this when you get a chance.,electrical,medium
+The fan in my room is not working. This needs to be fixed soon.,electrical,medium
+Power socket near the study table is sparking. Very concerning and needs immediate action.,electrical,high
+Power socket near the study table is sparking. Please arrange for a repair.,electrical,medium
+Short circuit near the washroom light. No rush at all.,electrical,low
+The tube light keeps flickering all night. Please look into this when you get a chance.,electrical,medium
+There is no electricity in the corridor since morning. Kindly resolve this at your convenience.,electrical,medium
+There is no electricity in the corridor since morning. This needs to be fixed soon.,electrical,medium
+The tube light keeps flickering all night. Please look into this when you get a chance.,electrical,medium
+The tube light keeps flickering all night. Very concerning and needs immediate action.,electrical,high
+Short circuit near the washroom light. Please look into this when you get a chance.,electrical,medium
+"The tube light keeps flickering all night. Please resolve as soon as possible, it's an emergency.",electrical,high
+Short circuit near the washroom light. Happens only occasionally.,electrical,low
+"The charging point in my room is dead. This cannot wait, please act now.",electrical,high
+The ceiling light bulb has fused. Small inconvenience.,electrical,low
+"The tube light keeps flickering all night. Please resolve as soon as possible, it's an emergency.",electrical,high
+The room's main switch board is not working. This is a safety risk.,electrical,high
+The charging point in my room is dead. Kindly resolve this at your convenience.,electrical,medium
+The ceiling light bulb has fused. It's a minor issue.,electrical,low
+Power socket near the study table is sparking. Small inconvenience.,electrical,low
+The charging point in my room is dead. Please arrange for a repair.,electrical,medium
+The charging point in my room is dead. Please arrange for a repair.,electrical,medium
+The room's main switch board is not working. Very concerning and needs immediate action.,electrical,high
+The fan in my room is not working. Please look into this when you get a chance.,electrical,medium
+The room's main switch board is not working. Needs attention right away.,electrical,high
+Power socket near the study table is sparking. Small inconvenience.,electrical,low
+The ceiling light bulb has fused. Whenever convenient.,electrical,low
+The room's main switch board is not working. Very concerning and needs immediate action.,electrical,high
+There is no electricity in the corridor since morning. Please look into this when you get a chance.,electrical,medium
+"The room's main switch board is not working. Please resolve as soon as possible, it's an emergency.",electrical,high
+The tube light keeps flickering all night. Not a big deal.,electrical,low
+There is no electricity in the corridor since morning. Requesting maintenance to check this.,electrical,medium
+The fan in my room is not working. Please arrange for a repair.,electrical,medium
+The fan in my room is not working. No rush at all.,electrical,low
+The room's main switch board is not working. Small inconvenience.,electrical,low
+Power socket near the study table is sparking. Happens only occasionally.,electrical,low
+"Power socket near the study table is sparking. Please resolve as soon as possible, it's an emergency.",electrical,high
+There is no electricity in the corridor since morning. Happens only occasionally.,electrical,low
+There is no electricity in the corridor since morning. Not a big deal.,electrical,low
+"The charging point in my room is dead. Please resolve as soon as possible, it's an emergency.",electrical,high
+The tube light keeps flickering all night. Please arrange for a repair.,electrical,medium
+Short circuit near the washroom light. Requesting maintenance to check this.,electrical,medium
+The ceiling light bulb has fused. Small inconvenience.,electrical,low
+Power socket near the study table is sparking. Just a small request.,electrical,low
+The tube light keeps flickering all night. Please look into this when you get a chance.,electrical,medium
+Power socket near the study table is sparking. Please look into this when you get a chance.,electrical,medium
+The tube light keeps flickering all night. It's a minor issue.,electrical,low
+Short circuit near the washroom light. Small inconvenience.,electrical,low
+The room's main switch board is not working. Kindly resolve this at your convenience.,electrical,medium
+"There is no electricity in the corridor since morning. Please resolve as soon as possible, it's an emergency.",electrical,high
+The ceiling light bulb has fused. Happens only occasionally.,electrical,low
+The charging point in my room is dead. It's a minor issue.,electrical,low
+The charging point in my room is dead. Please arrange for a repair.,electrical,medium
+The ceiling light bulb has fused. This is extremely urgent.,electrical,high
+Power socket near the study table is sparking. Whenever convenient.,electrical,low
+The toilet flush is broken. This is extremely urgent.,plumbing,high
+There is no water supply in my room since yesterday. Just a small request.,plumbing,low
+Water is leaking from the ceiling in the washroom. Small inconvenience.,plumbing,low
+The toilet flush is broken. Please look into this when you get a chance.,plumbing,medium
+Water is leaking from the ceiling in the washroom. Very concerning and needs immediate action.,plumbing,high
+The wash basin pipe is broken and water is flooding the floor. Whenever convenient.,plumbing,low
+The wash basin pipe is broken and water is flooding the floor. This is extremely urgent.,plumbing,high
+The drainage in the bathroom is blocked. Please fix this immediately.,plumbing,high
+Water is leaking from the ceiling in the washroom. Kindly resolve this at your convenience.,plumbing,medium
+The drainage in the bathroom is blocked. Please look into this when you get a chance.,plumbing,medium
+There is no water supply in my room since yesterday. Please arrange for a repair.,plumbing,medium
+The toilet flush is broken. Very concerning and needs immediate action.,plumbing,high
+Water is leaking from the ceiling in the washroom. Whenever convenient.,plumbing,low
+"Hot water is not coming in the shower. Please resolve as soon as possible, it's an emergency.",plumbing,high
+Hot water is not coming in the shower. Kindly resolve this at your convenience.,plumbing,medium
+There is no water supply in my room since yesterday. It's a minor issue.,plumbing,low
+The wash basin pipe is broken and water is flooding the floor. This is extremely urgent.,plumbing,high
+Hot water is not coming in the shower. It's a minor issue.,plumbing,low
+The wash basin pipe is broken and water is flooding the floor. Requesting maintenance to check this.,plumbing,medium
+There is no water supply in my room since yesterday. Just a small request.,plumbing,low
+The bathroom tap is leaking continuously. This is extremely urgent.,plumbing,high
+The wash basin pipe is broken and water is flooding the floor. Not a big deal.,plumbing,low
+There is no water supply in my room since yesterday. Requesting maintenance to check this.,plumbing,medium
+There is no water supply in my room since yesterday. Please look into this when you get a chance.,plumbing,medium
+The wash basin pipe is broken and water is flooding the floor. Whenever convenient.,plumbing,low
+The wash basin pipe is broken and water is flooding the floor. This needs to be fixed soon.,plumbing,medium
+The toilet flush is broken. Whenever convenient.,plumbing,low
+The toilet flush is broken. Happens only occasionally.,plumbing,low
+There is no water supply in my room since yesterday. This needs to be fixed soon.,plumbing,medium
+Water is leaking from the ceiling in the washroom. Not a big deal.,plumbing,low
+The bathroom tap is leaking continuously. Just a small request.,plumbing,low
+The wash basin pipe is broken and water is flooding the floor. This is extremely urgent.,plumbing,high
+The wash basin pipe is broken and water is flooding the floor. No rush at all.,plumbing,low
+There is no water supply in my room since yesterday. This is extremely urgent.,plumbing,high
+There is no water supply in my room since yesterday. Kindly resolve this at your convenience.,plumbing,medium
+"Water is leaking from the ceiling in the washroom. This cannot wait, please act now.",plumbing,high
+The toilet flush is broken. Requesting maintenance to check this.,plumbing,medium
+The bathroom tap is leaking continuously. Requesting maintenance to check this.,plumbing,medium
+The toilet flush is broken. This is extremely urgent.,plumbing,high
+There is no water supply in my room since yesterday. It's a minor issue.,plumbing,low
+Hot water is not coming in the shower. This needs to be fixed soon.,plumbing,medium
+The toilet flush is broken. This needs to be fixed soon.,plumbing,medium
+There is no water supply in my room since yesterday. This needs to be fixed soon.,plumbing,medium
+The wash basin pipe is broken and water is flooding the floor. Please look into this when you get a chance.,plumbing,medium
+The bathroom tap is leaking continuously. This needs to be fixed soon.,plumbing,medium
+The bathroom tap is leaking continuously. Not a big deal.,plumbing,low
+There is no water supply in my room since yesterday. This needs to be fixed soon.,plumbing,medium
+"There is no water supply in my room since yesterday. Please resolve as soon as possible, it's an emergency.",plumbing,high
+Hot water is not coming in the shower. Please look into this when you get a chance.,plumbing,medium
+The bathroom tap is leaking continuously. Whenever convenient.,plumbing,low
+There is no water supply in my room since yesterday. This needs to be fixed soon.,plumbing,medium
+The wash basin pipe is broken and water is flooding the floor. Please arrange for a repair.,plumbing,medium
+There is no water supply in my room since yesterday. No rush at all.,plumbing,low
+The drainage in the bathroom is blocked. This is extremely urgent.,plumbing,high
+The toilet flush is broken. Small inconvenience.,plumbing,low
+Hot water is not coming in the shower. Not a big deal.,plumbing,low
+The wash basin pipe is broken and water is flooding the floor. This is a safety risk.,plumbing,high
+The wash basin pipe is broken and water is flooding the floor. Please fix this immediately.,plumbing,high
+The drainage in the bathroom is blocked. Not a big deal.,plumbing,low
+The drainage in the bathroom is blocked. Happens only occasionally.,plumbing,low
+The bathroom tap is leaking continuously. No rush at all.,plumbing,low
+The drainage in the bathroom is blocked. Very concerning and needs immediate action.,plumbing,high
+Hot water is not coming in the shower. Very concerning and needs immediate action.,plumbing,high
+There is no water supply in my room since yesterday. Not a big deal.,plumbing,low
+Hot water is not coming in the shower. Not a big deal.,plumbing,low
+The bathroom tap is leaking continuously. Please fix this immediately.,plumbing,high
+There is no water supply in my room since yesterday. This is a safety risk.,plumbing,high
+The toilet flush is broken. Not a big deal.,plumbing,low
+The drainage in the bathroom is blocked. It's a minor issue.,plumbing,low
+Hot water is not coming in the shower. No rush at all.,plumbing,low
+The common washroom is very dirty. Very concerning and needs immediate action.,cleanliness,high
+The common washroom is very dirty. Requesting maintenance to check this.,cleanliness,medium
+The room was not cleaned after the previous occupant left. Requesting maintenance to check this.,cleanliness,medium
+The common washroom is very dirty. This is extremely urgent.,cleanliness,high
+The common washroom is very dirty. No rush at all.,cleanliness,low
+The corridor has not been cleaned for several days. Happens only occasionally.,cleanliness,low
+The common washroom is very dirty. Needs attention right away.,cleanliness,high
+The room was not cleaned after the previous occupant left. Requesting maintenance to check this.,cleanliness,medium
+The corridor has not been cleaned for several days. Requesting maintenance to check this.,cleanliness,medium
+Garbage is piling up near the room. Whenever convenient.,cleanliness,low
+The room was not cleaned after the previous occupant left. Not a big deal.,cleanliness,low
+There is dust everywhere in the reading room. Kindly resolve this at your convenience.,cleanliness,medium
+The common washroom is very dirty. This needs to be fixed soon.,cleanliness,medium
+There is dust everywhere in the reading room. Not a big deal.,cleanliness,low
+The corridor has not been cleaned for several days. This needs to be fixed soon.,cleanliness,medium
+There is dust everywhere in the reading room. Happens only occasionally.,cleanliness,low
+The common washroom is very dirty. This needs to be fixed soon.,cleanliness,medium
+There is dust everywhere in the reading room. Happens only occasionally.,cleanliness,low
+"The dustbin near my room has not been emptied. This cannot wait, please act now.",cleanliness,high
+"The dustbin near my room has not been emptied. Please resolve as soon as possible, it's an emergency.",cleanliness,high
+There is dust everywhere in the reading room. Just a small request.,cleanliness,low
+The corridor has not been cleaned for several days. Small inconvenience.,cleanliness,low
+"The room was not cleaned after the previous occupant left. Please resolve as soon as possible, it's an emergency.",cleanliness,high
+The dustbin near my room has not been emptied. Happens only occasionally.,cleanliness,low
+The room was not cleaned after the previous occupant left. Requesting maintenance to check this.,cleanliness,medium
+The room was not cleaned after the previous occupant left. Very concerning and needs immediate action.,cleanliness,high
+The dustbin near my room has not been emptied. It's a minor issue.,cleanliness,low
+The common washroom is very dirty. Requesting maintenance to check this.,cleanliness,medium
+The common washroom is very dirty. Not a big deal.,cleanliness,low
+Garbage is piling up near the room. Kindly resolve this at your convenience.,cleanliness,medium
+Garbage is piling up near the room. It's a minor issue.,cleanliness,low
+"Garbage is piling up near the room. Please resolve as soon as possible, it's an emergency.",cleanliness,high
+The corridor has not been cleaned for several days. Requesting maintenance to check this.,cleanliness,medium
+Garbage is piling up near the room. Please arrange for a repair.,cleanliness,medium
+The room was not cleaned after the previous occupant left. Kindly resolve this at your convenience.,cleanliness,medium
+The dustbin near my room has not been emptied. Please look into this when you get a chance.,cleanliness,medium
+The room was not cleaned after the previous occupant left. Not a big deal.,cleanliness,low
+The dustbin near my room has not been emptied. Please look into this when you get a chance.,cleanliness,medium
+There is dust everywhere in the reading room. Not a big deal.,cleanliness,low
+The corridor has not been cleaned for several days. Please arrange for a repair.,cleanliness,medium
+The dustbin near my room has not been emptied. Requesting maintenance to check this.,cleanliness,medium
+There is dust everywhere in the reading room. Not a big deal.,cleanliness,low
+The room was not cleaned after the previous occupant left. Requesting maintenance to check this.,cleanliness,medium
+"The room was not cleaned after the previous occupant left. Please resolve as soon as possible, it's an emergency.",cleanliness,high
+"The room was not cleaned after the previous occupant left. This cannot wait, please act now.",cleanliness,high
+The room was not cleaned after the previous occupant left. Kindly resolve this at your convenience.,cleanliness,medium
+The dustbin near my room has not been emptied. Not a big deal.,cleanliness,low
+There is dust everywhere in the reading room. Kindly resolve this at your convenience.,cleanliness,medium
+The common washroom is very dirty. This needs to be fixed soon.,cleanliness,medium
+Garbage is piling up near the room. No rush at all.,cleanliness,low
+There is dust everywhere in the reading room. Small inconvenience.,cleanliness,low
+Garbage is piling up near the room. Kindly resolve this at your convenience.,cleanliness,medium
+The dustbin near my room has not been emptied. Happens only occasionally.,cleanliness,low
+The room was not cleaned after the previous occupant left. Happens only occasionally.,cleanliness,low
+The room was not cleaned after the previous occupant left. Not a big deal.,cleanliness,low
+The room was not cleaned after the previous occupant left. Requesting maintenance to check this.,cleanliness,medium
+The dustbin near my room has not been emptied. Not a big deal.,cleanliness,low
+There is dust everywhere in the reading room. Please look into this when you get a chance.,cleanliness,medium
+The common washroom is very dirty. Happens only occasionally.,cleanliness,low
+The room was not cleaned after the previous occupant left. Requesting maintenance to check this.,cleanliness,medium
+There is dust everywhere in the reading room. This is a safety risk.,cleanliness,high
+Garbage is piling up near the room. Happens only occasionally.,cleanliness,low
+The corridor has not been cleaned for several days. Please arrange for a repair.,cleanliness,medium
+The dustbin near my room has not been emptied. Happens only occasionally.,cleanliness,low
+"Garbage is piling up near the room. Please resolve as soon as possible, it's an emergency.",cleanliness,high
+"The corridor has not been cleaned for several days. Please resolve as soon as possible, it's an emergency.",cleanliness,high
+There is dust everywhere in the reading room. Please look into this when you get a chance.,cleanliness,medium
+The dustbin near my room has not been emptied. Please arrange for a repair.,cleanliness,medium
+Garbage is piling up near the room. Happens only occasionally.,cleanliness,low
+The common washroom is very dirty. No rush at all.,cleanliness,low
+Wifi router near my floor is not connecting. This is a safety risk.,internet,high
+Wifi router near my floor is not connecting. Very concerning and needs immediate action.,internet,high
+The internet keeps disconnecting every few minutes. It's a minor issue.,internet,low
+The internet keeps disconnecting every few minutes. Just a small request.,internet,low
+The wifi is not working in my room. Needs attention right away.,internet,high
+Internet speed is extremely slow in the hostel. Please look into this when you get a chance.,internet,medium
+The wifi is not working in my room. Please fix this immediately.,internet,high
+The wifi is not working in my room. Kindly resolve this at your convenience.,internet,medium
+Internet speed is extremely slow in the hostel. Please look into this when you get a chance.,internet,medium
+No network coverage on the third floor. This is a safety risk.,internet,high
+Wifi router near my floor is not connecting. Please fix this immediately.,internet,high
+No network coverage on the third floor. Please look into this when you get a chance.,internet,medium
+Internet speed is extremely slow in the hostel. This is extremely urgent.,internet,high
+No network coverage on the third floor. No rush at all.,internet,low
+No network coverage on the third floor. Please arrange for a repair.,internet,medium
+The internet keeps disconnecting every few minutes. Please fix this immediately.,internet,high
+The wifi is not working in my room. Kindly resolve this at your convenience.,internet,medium
+The wifi is not working in my room. This needs to be fixed soon.,internet,medium
+No network coverage on the third floor. Very concerning and needs immediate action.,internet,high
+No network coverage on the third floor. Needs attention right away.,internet,high
+No network coverage on the third floor. This needs to be fixed soon.,internet,medium
+The wifi is not working in my room. This needs to be fixed soon.,internet,medium
+The wifi is not working in my room. Very concerning and needs immediate action.,internet,high
+The internet keeps disconnecting every few minutes. No rush at all.,internet,low
+The internet keeps disconnecting every few minutes. Please arrange for a repair.,internet,medium
+"Internet speed is extremely slow in the hostel. This cannot wait, please act now.",internet,high
+Wifi router near my floor is not connecting. Requesting maintenance to check this.,internet,medium
+The internet keeps disconnecting every few minutes. Requesting maintenance to check this.,internet,medium
+Wifi router near my floor is not connecting. Small inconvenience.,internet,low
+The wifi is not working in my room. Happens only occasionally.,internet,low
+"Internet speed is extremely slow in the hostel. Please resolve as soon as possible, it's an emergency.",internet,high
+No network coverage on the third floor. This needs to be fixed soon.,internet,medium
+The wifi is not working in my room. This needs to be fixed soon.,internet,medium
+Internet speed is extremely slow in the hostel. This needs to be fixed soon.,internet,medium
+Wifi router near my floor is not connecting. Requesting maintenance to check this.,internet,medium
+Wifi router near my floor is not connecting. Requesting maintenance to check this.,internet,medium
+Internet speed is extremely slow in the hostel. Whenever convenient.,internet,low
+The internet keeps disconnecting every few minutes. Kindly resolve this at your convenience.,internet,medium
+The internet keeps disconnecting every few minutes. Please arrange for a repair.,internet,medium
+The internet keeps disconnecting every few minutes. This is extremely urgent.,internet,high
+Wifi router near my floor is not connecting. Whenever convenient.,internet,low
+Internet speed is extremely slow in the hostel. Just a small request.,internet,low
+Wifi router near my floor is not connecting. Requesting maintenance to check this.,internet,medium
+Wifi router near my floor is not connecting. Requesting maintenance to check this.,internet,medium
+Wifi router near my floor is not connecting. Please arrange for a repair.,internet,medium
+Wifi router near my floor is not connecting. Small inconvenience.,internet,low
+The wifi is not working in my room. Needs attention right away.,internet,high
+The wifi is not working in my room. Very concerning and needs immediate action.,internet,high
+Internet speed is extremely slow in the hostel. Whenever convenient.,internet,low
+The internet keeps disconnecting every few minutes. Just a small request.,internet,low
+No network coverage on the third floor. Please look into this when you get a chance.,internet,medium
+Internet speed is extremely slow in the hostel. No rush at all.,internet,low
+Internet speed is extremely slow in the hostel. Whenever convenient.,internet,low
+No network coverage on the third floor. It's a minor issue.,internet,low
+The wifi is not working in my room. Kindly resolve this at your convenience.,internet,medium
+The internet keeps disconnecting every few minutes. It's a minor issue.,internet,low
+No network coverage on the third floor. Happens only occasionally.,internet,low
+The internet keeps disconnecting every few minutes. Please look into this when you get a chance.,internet,medium
+Wifi router near my floor is not connecting. This is a safety risk.,internet,high
+The wifi is not working in my room. This is a safety risk.,internet,high
+The internet keeps disconnecting every few minutes. Whenever convenient.,internet,low
+The wifi is not working in my room. Not a big deal.,internet,low
+No network coverage on the third floor. This is extremely urgent.,internet,high
+Internet speed is extremely slow in the hostel. Not a big deal.,internet,low
+The internet keeps disconnecting every few minutes. Requesting maintenance to check this.,internet,medium
+Internet speed is extremely slow in the hostel. This is a safety risk.,internet,high
+The internet keeps disconnecting every few minutes. Needs attention right away.,internet,high
+No network coverage on the third floor. Needs attention right away.,internet,high
+No network coverage on the third floor. Requesting maintenance to check this.,internet,medium
+The wifi is not working in my room. Please fix this immediately.,internet,high
+There is not enough variety in the mess menu. Whenever convenient.,food,low
+The food served in the mess is undercooked. Small inconvenience.,food,low
+The mess timing is not being followed properly. It's a minor issue.,food,low
+Food was served cold today. Requesting maintenance to check this.,food,medium
+Food was served cold today. Small inconvenience.,food,low
+The mess food quality has been very poor lately. Please arrange for a repair.,food,medium
+The food served in the mess is undercooked. This needs to be fixed soon.,food,medium
+There is not enough variety in the mess menu. Kindly resolve this at your convenience.,food,medium
+Food was served cold today. Small inconvenience.,food,low
+There is not enough variety in the mess menu. No rush at all.,food,low
+There was a foreign object found in the food. Small inconvenience.,food,low
+The mess food quality has been very poor lately. Requesting maintenance to check this.,food,medium
+The mess food quality has been very poor lately. Please arrange for a repair.,food,medium
+There is not enough variety in the mess menu. Happens only occasionally.,food,low
+The mess food quality has been very poor lately. Please arrange for a repair.,food,medium
+Food was served cold today. It's a minor issue.,food,low
+"Food was served cold today. Please resolve as soon as possible, it's an emergency.",food,high
+The mess food quality has been very poor lately. Small inconvenience.,food,low
+"There is not enough variety in the mess menu. Please resolve as soon as possible, it's an emergency.",food,high
+The mess timing is not being followed properly. Very concerning and needs immediate action.,food,high
+"There is not enough variety in the mess menu. Please resolve as soon as possible, it's an emergency.",food,high
+The food served in the mess is undercooked. Please fix this immediately.,food,high
+Food was served cold today. Please arrange for a repair.,food,medium
+The mess food quality has been very poor lately. Just a small request.,food,low
+Food was served cold today. Please arrange for a repair.,food,medium
+The food served in the mess is undercooked. Please arrange for a repair.,food,medium
+The mess food quality has been very poor lately. It's a minor issue.,food,low
+There was a foreign object found in the food. Whenever convenient.,food,low
+Food was served cold today. Happens only occasionally.,food,low
+The mess timing is not being followed properly. It's a minor issue.,food,low
+The mess food quality has been very poor lately. It's a minor issue.,food,low
+Food was served cold today. Very concerning and needs immediate action.,food,high
+The food served in the mess is undercooked. Requesting maintenance to check this.,food,medium
+Food was served cold today. Kindly resolve this at your convenience.,food,medium
+The mess timing is not being followed properly. Please arrange for a repair.,food,medium
+There is not enough variety in the mess menu. Please look into this when you get a chance.,food,medium
+There was a foreign object found in the food. Small inconvenience.,food,low
+The mess food quality has been very poor lately. Please arrange for a repair.,food,medium
+The food served in the mess is undercooked. Whenever convenient.,food,low
+"The mess timing is not being followed properly. This cannot wait, please act now.",food,high
+There was a foreign object found in the food. It's a minor issue.,food,low
+The mess timing is not being followed properly. Kindly resolve this at your convenience.,food,medium
+The food served in the mess is undercooked. Please look into this when you get a chance.,food,medium
+There is not enough variety in the mess menu. This is a safety risk.,food,high
+There is not enough variety in the mess menu. Whenever convenient.,food,low
+The mess food quality has been very poor lately. Please arrange for a repair.,food,medium
+Food was served cold today. Just a small request.,food,low
+There was a foreign object found in the food. Requesting maintenance to check this.,food,medium
+The mess timing is not being followed properly. Please fix this immediately.,food,high
+The food served in the mess is undercooked. Not a big deal.,food,low
+Food was served cold today. Not a big deal.,food,low
+The mess timing is not being followed properly. It's a minor issue.,food,low
+The mess food quality has been very poor lately. Very concerning and needs immediate action.,food,high
+The mess timing is not being followed properly. Please arrange for a repair.,food,medium
+There was a foreign object found in the food. Please arrange for a repair.,food,medium
+The mess food quality has been very poor lately. Not a big deal.,food,low
+The mess timing is not being followed properly. This needs to be fixed soon.,food,medium
+There was a foreign object found in the food. Please fix this immediately.,food,high
+The mess timing is not being followed properly. Please arrange for a repair.,food,medium
+The food served in the mess is undercooked. Happens only occasionally.,food,low
+There is not enough variety in the mess menu. This is a safety risk.,food,high
+Food was served cold today. Very concerning and needs immediate action.,food,high
+There is not enough variety in the mess menu. This is a safety risk.,food,high
+The food served in the mess is undercooked. Just a small request.,food,low
+The mess food quality has been very poor lately. Very concerning and needs immediate action.,food,high
+Food was served cold today. Happens only occasionally.,food,low
+The food served in the mess is undercooked. This is a safety risk.,food,high
+There is not enough variety in the mess menu. This is extremely urgent.,food,high
+Food was served cold today. Needs attention right away.,food,high
+The mess food quality has been very poor lately. Please arrange for a repair.,food,medium
+The fire extinguisher near my floor is missing. No rush at all.,security,low
+The fire extinguisher near my floor is missing. This is a safety risk.,security,high
+The cctv camera in the corridor is not working. Please arrange for a repair.,security,medium
+The security guard was not present at the gate last night. It's a minor issue.,security,low
+An unknown person was seen loitering near the hostel at night. This needs to be fixed soon.,security,medium
+An unknown person was seen loitering near the hostel at night. This is a safety risk.,security,high
+"The main gate lock is broken. This cannot wait, please act now.",security,high
+The main gate lock is broken. This needs to be fixed soon.,security,medium
+The main gate lock is broken. Not a big deal.,security,low
+The main gate lock is broken. No rush at all.,security,low
+My room door lock is broken. Just a small request.,security,low
+My room door lock is broken. Kindly resolve this at your convenience.,security,medium
+An unknown person was seen loitering near the hostel at night. Just a small request.,security,low
+My room door lock is broken. Kindly resolve this at your convenience.,security,medium
+My room door lock is broken. Please fix this immediately.,security,high
+An unknown person was seen loitering near the hostel at night. This needs to be fixed soon.,security,medium
+My room door lock is broken. It's a minor issue.,security,low
+"My room door lock is broken. This cannot wait, please act now.",security,high
+The security guard was not present at the gate last night. Happens only occasionally.,security,low
+The cctv camera in the corridor is not working. Needs attention right away.,security,high
+"The fire extinguisher near my floor is missing. This cannot wait, please act now.",security,high
+The cctv camera in the corridor is not working. This needs to be fixed soon.,security,medium
+An unknown person was seen loitering near the hostel at night. Very concerning and needs immediate action.,security,high
+My room door lock is broken. Happens only occasionally.,security,low
+The security guard was not present at the gate last night. This needs to be fixed soon.,security,medium
+The fire extinguisher near my floor is missing. Not a big deal.,security,low
+The fire extinguisher near my floor is missing. Please look into this when you get a chance.,security,medium
+The security guard was not present at the gate last night. Very concerning and needs immediate action.,security,high
+"The fire extinguisher near my floor is missing. Please resolve as soon as possible, it's an emergency.",security,high
+The fire extinguisher near my floor is missing. This needs to be fixed soon.,security,medium
+An unknown person was seen loitering near the hostel at night. This needs to be fixed soon.,security,medium
+An unknown person was seen loitering near the hostel at night. Requesting maintenance to check this.,security,medium
+The cctv camera in the corridor is not working. Kindly resolve this at your convenience.,security,medium
+The fire extinguisher near my floor is missing. Whenever convenient.,security,low
+The fire extinguisher near my floor is missing. Not a big deal.,security,low
+My room door lock is broken. No rush at all.,security,low
+The fire extinguisher near my floor is missing. No rush at all.,security,low
+The cctv camera in the corridor is not working. Please fix this immediately.,security,high
+An unknown person was seen loitering near the hostel at night. Just a small request.,security,low
+The cctv camera in the corridor is not working. This needs to be fixed soon.,security,medium
+An unknown person was seen loitering near the hostel at night. Not a big deal.,security,low
+My room door lock is broken. Needs attention right away.,security,high
+The fire extinguisher near my floor is missing. Very concerning and needs immediate action.,security,high
+The main gate lock is broken. Please look into this when you get a chance.,security,medium
+An unknown person was seen loitering near the hostel at night. Please fix this immediately.,security,high
+The fire extinguisher near my floor is missing. This is a safety risk.,security,high
+The security guard was not present at the gate last night. Please arrange for a repair.,security,medium
+The main gate lock is broken. It's a minor issue.,security,low
+My room door lock is broken. This needs to be fixed soon.,security,medium
+The security guard was not present at the gate last night. This needs to be fixed soon.,security,medium
+The main gate lock is broken. Please arrange for a repair.,security,medium
+The main gate lock is broken. Requesting maintenance to check this.,security,medium
+The cctv camera in the corridor is not working. Please fix this immediately.,security,high
+The fire extinguisher near my floor is missing. Not a big deal.,security,low
+My room door lock is broken. Needs attention right away.,security,high
+The fire extinguisher near my floor is missing. Kindly resolve this at your convenience.,security,medium
+The main gate lock is broken. Needs attention right away.,security,high
+My room door lock is broken. Small inconvenience.,security,low
+The security guard was not present at the gate last night. Happens only occasionally.,security,low
+The cctv camera in the corridor is not working. Requesting maintenance to check this.,security,medium
+My room door lock is broken. Kindly resolve this at your convenience.,security,medium
+My room door lock is broken. Please arrange for a repair.,security,medium
+The security guard was not present at the gate last night. This needs to be fixed soon.,security,medium
+The main gate lock is broken. Kindly resolve this at your convenience.,security,medium
+My room door lock is broken. Kindly resolve this at your convenience.,security,medium
+The cctv camera in the corridor is not working. Whenever convenient.,security,low
+The cctv camera in the corridor is not working. This needs to be fixed soon.,security,medium
+The main gate lock is broken. Kindly resolve this at your convenience.,security,medium
+The main gate lock is broken. Very concerning and needs immediate action.,security,high
+My room door lock is broken. Small inconvenience.,security,low
+The hostel notice was not shared with everyone. Please look into this when you get a chance.,other,medium
+Requesting an extra bedsheet for my room. Please fix this immediately.,other,high
+The noticeboard information is outdated. Please fix this immediately.,other,high
+"Requesting an extra bedsheet for my room. Please resolve as soon as possible, it's an emergency.",other,high
+The noticeboard information is outdated. Kindly resolve this at your convenience.,other,medium
+Requesting permission to keep a personal fan. Very concerning and needs immediate action.,other,high
+Requesting a change in roommate due to personal reasons. Not a big deal.,other,low
+"The noticeboard information is outdated. Please resolve as soon as possible, it's an emergency.",other,high
+Requesting permission to keep a personal fan. This is extremely urgent.,other,high
+The hostel notice was not shared with everyone. Please fix this immediately.,other,high
+Requesting an extra bedsheet for my room. Kindly resolve this at your convenience.,other,medium
+Requesting a change in roommate due to personal reasons. Small inconvenience.,other,low
+Requesting permission to keep a personal fan. Whenever convenient.,other,low
+The common room television remote is missing. Please look into this when you get a chance.,other,medium
+The common room television remote is missing. This needs to be fixed soon.,other,medium
+Requesting a change in roommate due to personal reasons. Please arrange for a repair.,other,medium
+Requesting a change in roommate due to personal reasons. Just a small request.,other,low
+Requesting an extra bedsheet for my room. Very concerning and needs immediate action.,other,high
+The hostel notice was not shared with everyone. Please arrange for a repair.,other,medium
+The hostel notice was not shared with everyone. This is extremely urgent.,other,high
+The common room television remote is missing. This is a safety risk.,other,high
+The hostel notice was not shared with everyone. Whenever convenient.,other,low
+The common room television remote is missing. It's a minor issue.,other,low
+Requesting permission to keep a personal fan. Please look into this when you get a chance.,other,medium
+The noticeboard information is outdated. Whenever convenient.,other,low
+Requesting a change in roommate due to personal reasons. This needs to be fixed soon.,other,medium
+"The common room television remote is missing. Please resolve as soon as possible, it's an emergency.",other,high
+Requesting permission to keep a personal fan. Requesting maintenance to check this.,other,medium
+The common room television remote is missing. Whenever convenient.,other,low
+"Requesting an extra bedsheet for my room. This cannot wait, please act now.",other,high
+Requesting a change in roommate due to personal reasons. Please fix this immediately.,other,high
+The common room television remote is missing. Kindly resolve this at your convenience.,other,medium
+The common room television remote is missing. Happens only occasionally.,other,low
+The common room television remote is missing. Please look into this when you get a chance.,other,medium
+Requesting permission to keep a personal fan. This needs to be fixed soon.,other,medium
+"Requesting permission to keep a personal fan. This cannot wait, please act now.",other,high
+The common room television remote is missing. Not a big deal.,other,low
+Requesting an extra bedsheet for my room. It's a minor issue.,other,low
+The hostel notice was not shared with everyone. Very concerning and needs immediate action.,other,high
+The noticeboard information is outdated. Requesting maintenance to check this.,other,medium
+Requesting a change in roommate due to personal reasons. Please look into this when you get a chance.,other,medium
+The common room television remote is missing. Please arrange for a repair.,other,medium
+The hostel notice was not shared with everyone. No rush at all.,other,low
+Requesting a change in roommate due to personal reasons. It's a minor issue.,other,low
+Requesting a change in roommate due to personal reasons. Kindly resolve this at your convenience.,other,medium
+The hostel notice was not shared with everyone. Please look into this when you get a chance.,other,medium
+Requesting permission to keep a personal fan. Needs attention right away.,other,high
+"Requesting an extra bedsheet for my room. Please resolve as soon as possible, it's an emergency.",other,high
+The noticeboard information is outdated. Very concerning and needs immediate action.,other,high
+Requesting a change in roommate due to personal reasons. Very concerning and needs immediate action.,other,high
+Requesting a change in roommate due to personal reasons. Requesting maintenance to check this.,other,medium
+Requesting an extra bedsheet for my room. This needs to be fixed soon.,other,medium
+Requesting an extra bedsheet for my room. Whenever convenient.,other,low
+Requesting permission to keep a personal fan. Needs attention right away.,other,high
+Requesting an extra bedsheet for my room. Small inconvenience.,other,low
+Requesting a change in roommate due to personal reasons. Please look into this when you get a chance.,other,medium
+The noticeboard information is outdated. This is extremely urgent.,other,high
+Requesting an extra bedsheet for my room. Please fix this immediately.,other,high
+The common room television remote is missing. This needs to be fixed soon.,other,medium
+The noticeboard information is outdated. This needs to be fixed soon.,other,medium
+Requesting a change in roommate due to personal reasons. Please look into this when you get a chance.,other,medium
+The noticeboard information is outdated. Just a small request.,other,low
+Requesting an extra bedsheet for my room. This needs to be fixed soon.,other,medium
+The common room television remote is missing. Please arrange for a repair.,other,medium
+Requesting a change in roommate due to personal reasons. This needs to be fixed soon.,other,medium
+The noticeboard information is outdated. This is extremely urgent.,other,high
+Requesting permission to keep a personal fan. This needs to be fixed soon.,other,medium
+The hostel notice was not shared with everyone. Please arrange for a repair.,other,medium
+Requesting a change in roommate due to personal reasons. Please look into this when you get a chance.,other,medium
+The noticeboard information is outdated. Requesting maintenance to check this.,other,medium

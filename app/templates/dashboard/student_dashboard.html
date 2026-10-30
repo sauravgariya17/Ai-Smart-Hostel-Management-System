@@ -1,0 +1,71 @@
+{% extends "layouts/module_page.html" %}
+{% block title %}My Dashboard · Smart Hostel Management System{% endblock %}
+{% block page_title %}My Dashboard{% endblock %}
+
+{% block module_content %}
+<div class="welcome-banner">
+    <div>
+        <span class="eyebrow">Welcome back</span>
+        <h2 id="welcomeName">Loading…</h2>
+        <p class="text-muted mb-0">Here's a quick look at your hostel status.</p>
+    </div>
+    <span class="role-badge">Student</span>
+</div>
+
+<div class="row g-4 mt-1">
+    <div class="col-sm-6 col-xl-3">
+        <div class="stat-card">
+            <div class="stat-icon bg-soft-accent"><i class="bi bi-door-closed"></i></div>
+            <div><span class="stat-label">My Room</span><h3 class="stat-value" id="statMyRoom">—</h3></div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="stat-card">
+            <div class="stat-icon bg-soft-warning"><i class="bi bi-credit-card"></i></div>
+            <div><span class="stat-label">Fee Due</span><h3 class="stat-value" id="statFeeDue">—</h3></div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="stat-card">
+            <div class="stat-icon bg-soft-info"><i class="bi bi-chat-square-dots"></i></div>
+            <div><span class="stat-label">Open Complaints</span><h3 class="stat-value" id="statMyComplaints">—</h3></div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="stat-card">
+            <div class="stat-icon bg-soft-success"><i class="bi bi-calendar-check"></i></div>
+            <div><span class="stat-label">Attendance Rate</span><h3 class="stat-value" id="statAttendanceRate">—</h3></div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4 mt-1">
+    <div class="col-lg-8">
+        <div class="panel-card h-100">
+            <div class="panel-card-header"><h5 class="mb-0">Quick Links</h5></div>
+            <div class="panel-card-body d-flex flex-wrap gap-2">
+                <a href="{{ url_for('main.fees_page') }}" class="btn btn-outline-secondary btn-sm"><i class="bi bi-credit-card me-2"></i>View Fees & Pay</a>
+                <a href="{{ url_for('main.complaints_page') }}" class="btn btn-outline-secondary btn-sm"><i class="bi bi-chat-square-dots me-2"></i>Raise a Complaint</a>
+                <a href="{{ url_for('main.rooms_page') }}" class="btn btn-outline-secondary btn-sm"><i class="bi bi-arrow-left-right me-2"></i>Request Room Transfer</a>
+                <a href="{{ url_for('main.attendance_page') }}" class="btn btn-outline-secondary btn-sm"><i class="bi bi-calendar-check me-2"></i>My Attendance</a>
+                <a href="{{ url_for('main.visitors_page') }}" class="btn btn-outline-secondary btn-sm"><i class="bi bi-person-walking me-2"></i>My Visitors</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="panel-card h-100 ai-panel">
+            <div class="panel-card-header"><h5 class="mb-0"><i class="bi bi-stars me-2"></i>AI Insights</h5></div>
+            <div class="panel-card-body">
+                <p class="text-muted small mb-0">
+                    Stay on top of your hostel life — pending fees, open complaints,
+                    and attendance are summarized here at a glance.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block module_scripts %}
+<script src="{{ url_for('static', filename='js/modules/dashboard_student.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Redirecting… · Smart Hostel Management System{% endblock %}
+{% block body_class %}auth-body{% endblock %}
+
+{% block content %}
+<div class="auth-shell auth-shell-centered">
+    <div class="text-center">
+        <div class="spinner-border text-accent mb-3" role="status"></div>
+        <p class="text-muted">Loading your dashboard…</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const user = TokenStore.getUser();
+        if (!user) {
+            window.location.href = "/login";
+            return;
+        }
+        const roleRoutes = {
+            admin: "/admin/dashboard",
+            warden: "/warden/dashboard",
+            student: "/student/dashboard",
+        };
+        window.location.href = roleRoutes[user.role] || "/login";
+    });
+</script>
+{% endblock %}

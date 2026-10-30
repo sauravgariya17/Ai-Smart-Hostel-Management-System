@@ -1,0 +1,12 @@
+{% extends "layouts/module_page.html" %}
+{% block title %}Wardens · Smart Hostel Management System{% endblock %}
+{% block page_title %}Wardens{% endblock %}
+
+{% block module_content %}
+<div id="wardensApp"></div>
+{% endblock %}
+
+{% block module_scripts %}
+<script src="{{ url_for('static', filename='js/common/crud-table.js') }}"></script>
+<script src="{{ url_for('static', filename='js/modules/wardens.js') }}"></script>
+{% endblock %}

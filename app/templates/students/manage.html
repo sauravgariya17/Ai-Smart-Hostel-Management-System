@@ -1,0 +1,11 @@
+{% extends "layouts/module_page.html" %}
+{% block title %}Students · Smart Hostel Management System{% endblock %}
+{% block page_title %}Students{% endblock %}
+
+{% block module_content %}
+<div id="studentsApp"></div>
+{% endblock %}
+
+{% block module_scripts %}
+<script src="{{ url_for('static', filename='js/modules/students.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "layouts/module_page.html" %}
+{% block title %}Visitors · Smart Hostel Management System{% endblock %}
+{% block page_title %}Visitor Management{% endblock %}
+
+{% block module_content %}
+<div id="visitorsApp"></div>
+{% endblock %}
+
+{% block module_scripts %}
+<script src="{{ url_for('static', filename='js/modules/visitors.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block body_class %}app-body{% endblock %}
+
+{% block content %}
+<div class="app-shell">
+    {% include "includes/sidebar.html" %}
+
+    <div class="app-main">
+        {% set page_title = self.page_title() %}
+        {% include "includes/navbar.html" %}
+
+        <main class="app-content">
+            {% block module_content %}{% endblock %}
+        </main>
+    </div>
+</div>
+{% endblock %}
+
+{% block page_title %}Dashboard{% endblock %}
+
+{% block extra_scripts %}
+<script src="{{ url_for('static', filename='js/common/crud-table.js') }}"></script>
+<script src="{{ url_for('static', filename='js/common/chatbot.js') }}"></script>
+{% block module_scripts %}{% endblock %}
+{% endblock %}

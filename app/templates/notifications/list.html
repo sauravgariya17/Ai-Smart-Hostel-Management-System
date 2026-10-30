@@ -1,0 +1,59 @@
+{% extends "layouts/module_page.html" %}
+{% block title %}Notifications · Smart Hostel Management System{% endblock %}
+{% block page_title %}Notifications{% endblock %}
+
+{% block module_content %}
+<div class="panel-card">
+    <div class="panel-card-header d-flex align-items-center justify-content-between">
+        <h5 class="mb-0">All Notifications</h5>
+        <button class="btn btn-outline-secondary btn-sm" id="markAllReadBtn">Mark all as read</button>
+    </div>
+    <div class="panel-card-body p-0">
+        <div id="notificationsList"></div>
+    </div>
+</div>
+
+<div class="panel-card mt-3 d-none" id="broadcastCard">
+    <div class="panel-card-header"><h5 class="mb-0">Broadcast Notification</h5></div>
+    <div class="panel-card-body">
+        <div id="broadcastAlert" class="alert d-none"></div>
+        <form id="broadcastForm" class="row g-3">
+            <div class="col-sm-3">
+                <label class="form-label">Target Role</label>
+                <select class="form-select" name="target_role" required>
+                    <option value="student">Students</option>
+                    <option value="warden">Wardens</option>
+                    <option value="admin">Admins</option>
+                </select>
+            </div>
+            <div class="col-sm-3">
+                <label class="form-label">Type</label>
+                <select class="form-select" name="notif_type">
+                    <option value="info">Info</option>
+                    <option value="success">Success</option>
+                    <option value="warning">Warning</option>
+                    <option value="danger">Danger</option>
+                </select>
+            </div>
+            <div class="col-sm-6">
+                <label class="form-label">Title</label>
+                <input type="text" class="form-control" name="title" required>
+            </div>
+            <div class="col-12">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" name="message" rows="2" required></textarea>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary-accent btn-sm" id="broadcastBtn">
+                    <span class="btn-text">Send Broadcast</span>
+                    <span class="spinner-border spinner-border-sm d-none"></span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block module_scripts %}
+<script src="{{ url_for('static', filename='js/modules/notifications.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "layouts/module_page.html" %}
+{% block title %}Warden Dashboard · Smart Hostel Management System{% endblock %}
+{% block page_title %}Warden Dashboard{% endblock %}
+
+{% block module_content %}
+<div class="welcome-banner">
+    <div>
+        <span class="eyebrow">Welcome back</span>
+        <h2 id="welcomeName">Loading…</h2>
+        <p class="text-muted mb-0">Here's today's operational snapshot.</p>
+    </div>
+    <span class="role-badge">Warden</span>
+</div>
+
+<div class="row g-4 mt-1">
+    <div class="col-sm-6 col-xl-3">
+        <div class="stat-card">
+            <div class="stat-icon bg-soft-warning"><i class="bi bi-exclamation-circle"></i></div>
+            <div><span class="stat-label">Open Complaints</span><h3 class="stat-value" id="statOpenComplaints">—</h3></div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="stat-card">
+            <div class="stat-icon bg-soft-success"><i class="bi bi-clipboard-check"></i></div>
+            <div><span class="stat-label">Present Today</span><h3 class="stat-value" id="statPresentToday">—</h3></div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="stat-card">
+            <div class="stat-icon bg-soft-info"><i class="bi bi-person-walking"></i></div>
+            <div><span class="stat-label">Active Visitors</span><h3 class="stat-value" id="statActiveVisitors">—</h3></div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="stat-card">
+            <div class="stat-icon bg-soft-accent"><i class="bi bi-tools"></i></div>
+            <div><span class="stat-label">Pending Maintenance</span><h3 class="stat-value" id="statPendingMaintenance">—</h3></div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4 mt-1">
+    <div class="col-lg-6">
+        <div class="panel-card h-100">
+            <div class="panel-card-header"><h5 class="mb-0">Today's Attendance Rate</h5></div>
+            <div class="panel-card-body">
+                <div class="chart-canvas-wrap chart-sm"><canvas id="attendanceRateChart"></canvas></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="panel-card h-100 ai-panel">
+            <div class="panel-card-header"><h5 class="mb-0"><i class="bi bi-stars me-2"></i>Quick Actions</h5></div>
+            <div class="panel-card-body d-flex flex-column gap-2">
+                <a href="{{ url_for('main.attendance_page') }}" class="btn btn-outline-secondary btn-sm text-start"><i class="bi bi-clipboard-check me-2"></i>Mark Attendance</a>
+                <a href="{{ url_for('main.complaints_page') }}" class="btn btn-outline-secondary btn-sm text-start"><i class="bi bi-exclamation-circle me-2"></i>Review Complaints</a>
+                <a href="{{ url_for('main.visitors_page') }}" class="btn btn-outline-secondary btn-sm text-start"><i class="bi bi-person-walking me-2"></i>Manage Visitors</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block module_scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="{{ url_for('static', filename='js/common/charts.js') }}"></script>
+<script src="{{ url_for('static', filename='js/modules/dashboard_warden.js') }}"></script>
+{% endblock %}

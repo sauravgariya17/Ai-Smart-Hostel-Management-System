@@ -1,0 +1,11 @@
+{% extends "layouts/module_page.html" %}
+{% block title %}Complaints · Smart Hostel Management System{% endblock %}
+{% block page_title %}Complaints{% endblock %}
+
+{% block module_content %}
+<div id="complaintsApp"></div>
+{% endblock %}
+
+{% block module_scripts %}
+<script src="{{ url_for('static', filename='js/modules/complaints.js') }}"></script>
+{% endblock %}

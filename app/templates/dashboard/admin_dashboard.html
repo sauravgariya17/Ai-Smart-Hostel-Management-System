@@ -1,0 +1,135 @@
+{% extends "layouts/module_page.html" %}
+{% block title %}Admin Dashboard · Smart Hostel Management System{% endblock %}
+{% block page_title %}Admin Dashboard{% endblock %}
+
+{% block module_content %}
+<div class="welcome-banner">
+    <div>
+        <span class="eyebrow">Welcome back</span>
+        <h2 id="welcomeName">Loading…</h2>
+        <p class="text-muted mb-0">Here's the system-wide snapshot for today.</p>
+    </div>
+    <span class="role-badge">Administrator</span>
+</div>
+
+<div class="row g-4 mt-1">
+    <div class="col-sm-6 col-xl-3">
+        <div class="stat-card">
+            <div class="stat-icon bg-soft-accent"><i class="bi bi-people"></i></div>
+            <div><span class="stat-label">Total Students</span><h3 class="stat-value" id="statTotalStudents">—</h3></div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="stat-card">
+            <div class="stat-icon bg-soft-success"><i class="bi bi-door-open"></i></div>
+            <div><span class="stat-label">Rooms Occupied</span><h3 class="stat-value" id="statRoomsOccupied">—</h3></div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="stat-card">
+            <div class="stat-icon bg-soft-warning"><i class="bi bi-exclamation-circle"></i></div>
+            <div><span class="stat-label">Open Complaints</span><h3 class="stat-value" id="statOpenComplaints">—</h3></div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="stat-card">
+            <div class="stat-icon bg-soft-info"><i class="bi bi-person-badge"></i></div>
+            <div><span class="stat-label">Total Wardens</span><h3 class="stat-value" id="statTotalWardens">—</h3></div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4 mt-1">
+    <div class="col-sm-6 col-xl-3">
+        <div class="stat-mini">
+            <span class="stat-mini-label">Occupancy Rate</span>
+            <div class="stat-mini-value" id="statOccupancyRate">—</div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="stat-mini">
+            <span class="stat-mini-label">Fee Collected</span>
+            <div class="stat-mini-value" id="statFeeCollected">—</div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="stat-mini">
+            <span class="stat-mini-label">Fee Outstanding</span>
+            <div class="stat-mini-value" id="statFeeOutstanding">—</div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="stat-mini">
+            <span class="stat-mini-label">Visitors Today</span>
+            <div class="stat-mini-value" id="statVisitorsToday">—</div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4 mt-1">
+    <div class="col-lg-6">
+        <div class="chart-card">
+            <h6><i class="bi bi-door-open me-2"></i>Occupancy by Hostel</h6>
+            <div class="chart-canvas-wrap"><canvas id="dashOccupancyChart"></canvas></div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="chart-card">
+            <h6><i class="bi bi-cash-coin me-2"></i>Monthly Fee Collection</h6>
+            <div class="chart-canvas-wrap"><canvas id="dashCollectionChart"></canvas></div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4 mt-1">
+    <div class="col-12">
+        <h5 class="ai-section-heading"><i class="bi bi-stars me-2"></i>AI Insights</h5>
+    </div>
+    <div class="col-lg-7">
+        <div class="chart-card">
+            <div class="d-flex align-items-center justify-content-between mb-1">
+                <h6 class="mb-0"><i class="bi bi-graph-up-arrow me-2"></i>Occupancy Forecast (Next 30 Days)</h6>
+                <span class="ai-chip ai-chip-sm"><i class="bi bi-stars"></i> ML-predicted</span>
+            </div>
+            <p class="text-muted small mb-2" id="occupancyForecastDisclaimer"></p>
+            <div class="chart-canvas-wrap chart-sm"><canvas id="dashOccupancyForecastChart"></canvas></div>
+        </div>
+    </div>
+    <div class="col-lg-5">
+        <div class="chart-card h-100">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+                <h6 class="mb-0"><i class="bi bi-shield-exclamation me-2"></i>Fee Defaulter Risk</h6>
+                <span class="ai-chip ai-chip-sm"><i class="bi bi-stars"></i> AI risk score</span>
+            </div>
+            <div class="row g-2 mb-3">
+                <div class="col-4">
+                    <div class="stat-mini text-center">
+                        <span class="stat-mini-label">High Risk</span>
+                        <div class="stat-mini-value" id="riskHighCount">—</div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="stat-mini text-center">
+                        <span class="stat-mini-label">Medium</span>
+                        <div class="stat-mini-value" id="riskMediumCount">—</div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="stat-mini text-center">
+                        <span class="stat-mini-label">Low</span>
+                        <div class="stat-mini-value" id="riskLowCount">—</div>
+                    </div>
+                </div>
+            </div>
+            <div id="topRiskStudentsList" class="small"></div>
+            <a href="{{ url_for('main.fees_page') }}" class="btn btn-outline-secondary btn-sm w-100 mt-2">View Full Risk List</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block module_scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="{{ url_for('static', filename='js/common/charts.js') }}"></script>
+<script src="{{ url_for('static', filename='js/modules/dashboard_admin.js') }}"></script>
+{% endblock %}

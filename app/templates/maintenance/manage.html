@@ -1,0 +1,11 @@
+{% extends "layouts/module_page.html" %}
+{% block title %}Maintenance · Smart Hostel Management System{% endblock %}
+{% block page_title %}Maintenance{% endblock %}
+
+{% block module_content %}
+<div id="maintenanceApp"></div>
+{% endblock %}
+
+{% block module_scripts %}
+<script src="{{ url_for('static', filename='js/modules/maintenance.js') }}"></script>
+{% endblock %}

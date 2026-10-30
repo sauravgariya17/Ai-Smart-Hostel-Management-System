@@ -1,0 +1,49 @@
+{% extends "layouts/module_page.html" %}
+{% block title %}Attendance · Smart Hostel Management System{% endblock %}
+{% block page_title %}Attendance{% endblock %}
+
+{% block module_content %}
+<div class="panel-card mb-3">
+    <div class="panel-card-header">
+        <h5 class="mb-0">Mark Attendance</h5>
+        <small class="text-muted">Record a single student's attendance for a given date</small>
+    </div>
+    <div class="panel-card-body">
+        <div id="markAttendanceAlert" class="alert d-none"></div>
+        <form id="markAttendanceForm" class="row g-3">
+            <div class="col-sm-3">
+                <label class="form-label">Student ID</label>
+                <input type="number" class="form-control" name="student_id" required>
+            </div>
+            <div class="col-sm-3">
+                <label class="form-label">Date</label>
+                <input type="date" class="form-control" name="attendance_date">
+            </div>
+            <div class="col-sm-3">
+                <label class="form-label">Status</label>
+                <select class="form-select" name="status" required>
+                    <option value="present">Present</option>
+                    <option value="absent">Absent</option>
+                    <option value="leave">Leave</option>
+                </select>
+            </div>
+            <div class="col-sm-3">
+                <label class="form-label">Remarks</label>
+                <input type="text" class="form-control" name="remarks">
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary-accent btn-sm" id="markAttendanceBtn">
+                    <span class="btn-text">Mark Attendance</span>
+                    <span class="spinner-border spinner-border-sm d-none"></span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="attendanceApp"></div>
+{% endblock %}
+
+{% block module_scripts %}
+<script src="{{ url_for('static', filename='js/modules/attendance.js') }}"></script>
+{% endblock %}

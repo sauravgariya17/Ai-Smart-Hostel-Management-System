@@ -1,0 +1,50 @@
+{% extends "layouts/module_page.html" %}
+{% block title %}Reports · Smart Hostel Management System{% endblock %}
+{% block page_title %}Reports & Analytics{% endblock %}
+
+{% block module_content %}
+<div class="row g-4">
+    <div class="col-lg-6">
+        <div class="chart-card">
+            <h6><i class="bi bi-door-open me-2"></i>Occupancy by Hostel</h6>
+            <div class="chart-canvas-wrap"><canvas id="occupancyChart"></canvas></div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="chart-card">
+            <h6><i class="bi bi-pie-chart me-2"></i>Room Status Breakdown</h6>
+            <div class="chart-canvas-wrap"><canvas id="roomStatusChart"></canvas></div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="chart-card">
+            <h6><i class="bi bi-cash-coin me-2"></i>Monthly Fee Collection (last 6 months)</h6>
+            <div class="chart-canvas-wrap"><canvas id="collectionChart"></canvas></div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="chart-card">
+            <h6><i class="bi bi-exclamation-circle me-2"></i>Complaints by Category</h6>
+            <div class="chart-canvas-wrap"><canvas id="complaintsChart"></canvas></div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="chart-card">
+            <h6><i class="bi bi-clipboard-check me-2"></i>Complaint Status</h6>
+            <div class="chart-canvas-wrap chart-sm"><canvas id="complaintStatusChart"></canvas></div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="chart-card">
+            <h6><i class="bi bi-tools me-2"></i>Maintenance Requests by Status</h6>
+            <div class="chart-canvas-wrap chart-sm"><canvas id="maintenanceChart"></canvas></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block module_scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="{{ url_for('static', filename='js/common/charts.js') }}"></script>
+<script src="{{ url_for('static', filename='js/modules/reports.js') }}"></script>
+{% endblock %}
