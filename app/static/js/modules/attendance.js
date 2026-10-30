@@ -66,9 +66,61 @@ function initMarkAttendanceForm(table) {
     });
 }
 
+async function loadDailyAttendanceQr() {
+    const image = document.getElementById("attendanceQrImage");
+    const loading = document.getElementById("attendanceQrLoading");
+    const alertEl = document.getElementById("attendanceQrAlert");
+    if (!image) return;
+
+    hideAlert(alertEl);
+    loading.classList.remove("d-none");
+    image.classList.add("d-none");
+    try {
+        const response = await apiRequest("/api/attendance/qr", { method: "GET" });
+        if (!response.ok) {
+            const data = await response.json();
+            throw new Error(data.message || "Could not load today's QR code.");
+        }
+        const imageUrl = URL.createObjectURL(await response.blob());
+        if (image.dataset.objectUrl) URL.revokeObjectURL(image.dataset.objectUrl);
+        image.dataset.objectUrl = imageUrl;
+        image.src = imageUrl;
+        image.classList.remove("d-none");
+        document.getElementById("attendanceQrDate").textContent = `Valid for ${new Date().toLocaleDateString()}`;
+    } catch (err) {
+        showAlert(alertEl, err.message || "Could not load today's QR code.");
+    } finally {
+        loading.classList.add("d-none");
+    }
+}
+
+async function submitQrAttendance(token) {
+    const response = await apiRequest("/api/attendance/qr/checkin", {
+        method: "POST",
+        body: JSON.stringify({ token }),
+    });
+    const data = await response.json();
+    const alertEl = document.getElementById("qrCheckinAlert");
+    showAlert(alertEl, data.message || "Unable to record attendance.", response.ok && data.success ? "success" : "danger");
+    if (response.ok && data.success) {
+        const url = new URL(window.location.href);
+        url.searchParams.delete("checkin");
+        window.history.replaceState({}, "", url);
+        renderStudentAttendanceHistory();
+    }
+}
+
 async function renderStudentAttendanceView() {
     const wrapper = document.querySelector(".panel-card").parentElement;
     wrapper.innerHTML = `
+        <div id="qrCheckinAlert" class="alert d-none" role="alert"></div>
+        <div class="panel-card">
+            <div class="panel-card-header"><h5 class="mb-0">Check In with Today's QR</h5></div>
+            <div class="panel-card-body">
+                <p class="text-muted">Scan the QR displayed by your warden to record today's attendance.</p>
+                <button type="button" class="btn btn-primary-accent btn-sm d-none" id="confirmQrCheckin">Record attendance</button>
+            </div>
+        </div>
         <div class="panel-card">
             <div class="panel-card-header"><h5 class="mb-0">My Attendance History</h5></div>
             <div class="panel-card-body">
@@ -82,6 +134,26 @@ async function renderStudentAttendanceView() {
         </div>
     `;
 
+    const checkinToken = new URLSearchParams(window.location.search).get("checkin");
+    if (checkinToken) {
+        document.getElementById("confirmQrCheckin").classList.remove("d-none");
+        document.getElementById("confirmQrCheckin").addEventListener("click", async (event) => {
+            const button = event.currentTarget;
+            button.disabled = true;
+            try {
+                await submitQrAttendance(checkinToken);
+            } catch (err) {
+                showAlert(document.getElementById("qrCheckinAlert"), "Unable to reach the server.");
+            } finally {
+                button.disabled = false;
+            }
+        });
+    }
+
+    await renderStudentAttendanceHistory();
+}
+
+async function renderStudentAttendanceHistory() {
     const response = await apiRequest("/api/attendance/my", { method: "GET" });
     const data = await response.json();
     const tbody = document.getElementById("myAttendanceBody");
@@ -109,4 +181,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const table = initAttendanceTable();
     table.init();
     initMarkAttendanceForm(table);
+    loadDailyAttendanceQr();
+    document.getElementById("refreshAttendanceQr").addEventListener("click", loadDailyAttendanceQr);
 });

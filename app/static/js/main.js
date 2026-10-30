@@ -66,6 +66,11 @@ function _fakeErrorResponse(status, message) {
     };
 }
 
+function loginUrlForCurrentPage() {
+    const next = `${window.location.pathname}${window.location.search}`;
+    return `/login?next=${encodeURIComponent(next)}`;
+}
+
 async function apiRequest(path, options = {}, retry = true) {
     const headers = Object.assign(
         { "Content-Type": "application/json" },
@@ -93,7 +98,7 @@ async function apiRequest(path, options = {}, retry = true) {
             return apiRequest(path, options, false);
         }
         TokenStore.clear();
-        window.location.href = "/login";
+        window.location.href = loginUrlForCurrentPage();
         return _fakeErrorResponse(401, "Your session has expired. Please log in again.");
     }
 
@@ -237,7 +242,7 @@ function guardProtectedPage() {
     if (!protectedPaths.includes(window.location.pathname)) return;
 
     if (!TokenStore.getAccessToken()) {
-        window.location.href = "/login";
+        window.location.href = loginUrlForCurrentPage();
     }
 }
 

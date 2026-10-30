@@ -5,9 +5,14 @@ Attendance Management: wardens/admins mark daily attendance (single or
 bulk per hostel/room), students can view their own history.
 """
 
-from datetime import datetime
+from datetime import date, datetime
+from io import BytesIO
+import socket
+from urllib.parse import urlsplit, urlunsplit
 
-from flask import request, jsonify
+import qrcode
+from flask import request, jsonify, current_app, send_file, url_for
+from itsdangerous import URLSafeSerializer, BadSignature
 
 from app.attendance import attendance_bp
 from app.extensions import db
@@ -31,6 +36,78 @@ def _parse_date(value):
         return datetime.strptime(value, "%Y-%m-%d").date()
     except (ValueError, TypeError):
         return datetime.utcnow().date()
+
+
+def _daily_qr_serializer():
+    return URLSafeSerializer(current_app.config["SECRET_KEY"], salt="daily-attendance-qr-v1")
+
+
+def _today_qr_token():
+    # URLSafeSerializer output is deterministic, so all staff see the same QR
+    # for a given day. The date embedded in it makes yesterday's QR unusable.
+    return _daily_qr_serializer().dumps({"date": date.today().isoformat()})
+
+
+@attendance_bp.route("/qr", methods=["GET"])
+@admin_or_warden_required
+def daily_attendance_qr():
+    token = _today_qr_token()
+    checkin_url = url_for("main.attendance_page", _external=True, checkin=token)
+    parsed_url = urlsplit(checkin_url)
+    hostname = parsed_url.hostname
+    if hostname in {"localhost", "127.0.0.1", "0.0.0.0"}:
+        # A QR containing localhost would send a student's phone back to the
+        # phone itself. Resolve the server's LAN interface for local demos.
+        try:
+            with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as probe:
+                probe.connect(("8.8.8.8", 80))
+                hostname = probe.getsockname()[0]
+        except OSError:
+            pass
+    netloc = f"{hostname}:{parsed_url.port}" if parsed_url.port else hostname
+    checkin_url = urlunsplit((parsed_url.scheme, netloc, parsed_url.path, parsed_url.query, ""))
+    image = qrcode.make(checkin_url)
+    output = BytesIO()
+    image.save(output, format="PNG")
+    output.seek(0)
+    response = send_file(output, mimetype="image/png", download_name="attendance-qr.png")
+    response.headers["Cache-Control"] = "no-store"
+    return response
+
+
+@attendance_bp.route("/qr/checkin", methods=["POST"])
+@student_required
+def qr_checkin():
+    data = request.get_json(silent=True) or {}
+    token = data.get("token", "")
+    try:
+        payload = _daily_qr_serializer().loads(token)
+    except (BadSignature, TypeError):
+        return jsonify({"success": False, "message": "This attendance QR code is invalid."}), 400
+
+    today = date.today()
+    if payload.get("date") != today.isoformat():
+        return jsonify({"success": False, "message": "This QR code has expired. Please scan today's code."}), 400
+
+    student = _current_student_or_404()
+    if not student:
+        return jsonify({"success": False, "message": "Student profile not found."}), 404
+
+    existing = Attendance.query.filter_by(student_id=student.id, attendance_date=today).first()
+    if existing:
+        if existing.status == AttendanceStatusEnum.PRESENT:
+            return jsonify({"success": True, "message": "Your attendance is already recorded for today."}), 200
+        return jsonify({"success": False, "message": "Attendance has already been recorded for you today."}), 409
+
+    record = Attendance(
+        student_id=student.id,
+        attendance_date=today,
+        status=AttendanceStatusEnum.PRESENT,
+        remarks="QR check-in",
+    )
+    db.session.add(record)
+    db.session.commit()
+    return jsonify({"success": True, "message": "Attendance recorded for today.", "attendance": record.to_dict()}), 201
 
 
 @attendance_bp.route("", methods=["GET"])

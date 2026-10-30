@@ -62,7 +62,11 @@ function initLoginPage() {
 
             TokenStore.save(data.access_token, data.refresh_token, data.user);
             const roleRoutes = { admin: "/admin/dashboard", warden: "/warden/dashboard", student: "/student/dashboard" };
-            window.location.href = roleRoutes[data.user.role] || "/dashboard";
+            const requestedPath = new URLSearchParams(window.location.search).get("next");
+            const safeRequestedPath = requestedPath && requestedPath.startsWith("/") && !requestedPath.startsWith("//") && !requestedPath.includes("\\")
+                ? requestedPath
+                : null;
+            window.location.href = safeRequestedPath || roleRoutes[data.user.role] || "/dashboard";
         } catch (err) {
             showAlert(alertEl, "Unable to reach the server. Please try again.");
         } finally {

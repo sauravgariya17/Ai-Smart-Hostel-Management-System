@@ -3,6 +3,22 @@
 {% block page_title %}Attendance{% endblock %}
 
 {% block module_content %}
+<div class="panel-card mb-3" id="dailyQrCard">
+    <div class="panel-card-header d-flex align-items-center justify-content-between gap-2">
+        <div>
+            <h5 class="mb-0">Today's Attendance QR</h5>
+            <small class="text-muted">Students scan this code while signed in to record their attendance.</small>
+        </div>
+        <button type="button" class="btn btn-outline-secondary btn-sm" id="refreshAttendanceQr">Refresh QR</button>
+    </div>
+    <div class="panel-card-body text-center">
+        <div id="attendanceQrAlert" class="alert d-none" role="alert"></div>
+        <img id="attendanceQrImage" alt="Today's attendance QR code" class="img-fluid d-none" style="width: 280px; max-width: 100%;">
+        <div id="attendanceQrLoading" class="text-muted">Loading today's QR code…</div>
+        <div id="attendanceQrDate" class="small text-muted mt-2"></div>
+    </div>
+</div>
+
 <div class="panel-card mb-3">
     <div class="panel-card-header">
         <h5 class="mb-0">Mark Attendance</h5>
