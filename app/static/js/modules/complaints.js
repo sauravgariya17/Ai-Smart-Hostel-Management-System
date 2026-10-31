@@ -168,10 +168,14 @@ async function renderStudentComplaintsView() {
 
     document.getElementById("aiSuggestBtn").addEventListener("click", async () => {
         const form = document.getElementById("raiseComplaintForm");
+        const titleField = form.elements.namedItem("title");
+        const descriptionField = form.elements.namedItem("description");
+        const categoryField = form.elements.namedItem("category");
+        const priorityField = form.elements.namedItem("priority");
         const box = document.getElementById("aiSuggestionBox");
         const btn = document.getElementById("aiSuggestBtn");
 
-        if (!form.title.value.trim()) {
+        if (!titleField.value.trim()) {
             box.classList.remove("d-none");
             box.innerHTML = `<i class="bi bi-exclamation-circle me-1"></i> Please enter a title first so AI has something to analyze.`;
             return;
@@ -184,7 +188,7 @@ async function renderStudentComplaintsView() {
         try {
             const response = await apiRequest("/api/ai/complaints/classify", {
                 method: "POST",
-                body: JSON.stringify({ title: form.title.value, description: form.description.value }),
+                body: JSON.stringify({ title: titleField.value, description: descriptionField.value }),
             });
             const data = await response.json();
 
@@ -195,8 +199,8 @@ async function renderStudentComplaintsView() {
             }
 
             const p = data.prediction;
-            form.category.value = p.predicted_category;
-            form.priority.value = p.predicted_priority;
+            categoryField.value = p.predicted_category;
+            priorityField.value = p.predicted_priority;
 
             box.classList.remove("d-none");
             box.innerHTML = `
@@ -217,15 +221,19 @@ async function renderStudentComplaintsView() {
     document.getElementById("raiseComplaintForm").addEventListener("submit", async (e) => {
         e.preventDefault();
         const form = e.target;
+        const titleField = form.elements.namedItem("title");
+        const categoryField = form.elements.namedItem("category");
+        const priorityField = form.elements.namedItem("priority");
+        const descriptionField = form.elements.namedItem("description");
         const alertEl = document.getElementById("raiseComplaintAlert");
         const submitBtn = document.getElementById("raiseComplaintBtn");
         hideAlert(alertEl);
 
         const payload = {
-            title: form.title.value,
-            category: form.category.value,
-            priority: form.priority.value,
-            description: form.description.value,
+            title: titleField.value.trim(),
+            category: categoryField.value,
+            priority: priorityField.value,
+            description: descriptionField.value,
         };
 
         setButtonLoading(submitBtn, true);
