@@ -71,8 +71,10 @@ def raise_complaint():
     # of a hardcoded default.
     ai_prediction = classify_complaint(title=data.get("title", ""), description=data.get("description", ""))
 
-    final_category = data.get("category") or ai_prediction["predicted_category"]
-    final_priority = data.get("priority") or ai_prediction["predicted_priority"]
+    # SQLAlchemy's Enum columns store enum member names in MySQL (for example,
+    # PLUMBING), while the API and classifier use lowercase enum values.
+    final_category = ComplaintCategoryEnum(data.get("category") or ai_prediction["predicted_category"])
+    final_priority = ComplaintPriorityEnum(data.get("priority") or ai_prediction["predicted_priority"])
 
     complaint = Complaint(
         student_id=student.id,
@@ -81,8 +83,8 @@ def raise_complaint():
         description=data.get("description"),
         priority=final_priority,
         status=ComplaintStatusEnum.OPEN,
-        ai_suggested_category=ai_prediction["predicted_category"],
-        ai_suggested_priority=ai_prediction["predicted_priority"],
+        ai_suggested_category=ComplaintCategoryEnum(ai_prediction["predicted_category"]),
+        ai_suggested_priority=ComplaintPriorityEnum(ai_prediction["predicted_priority"]),
         ai_confidence=max(ai_prediction["category_confidence"], ai_prediction["priority_confidence"]),
     )
     db.session.add(complaint)
@@ -140,7 +142,7 @@ def update_complaint_status(complaint_id):
     if errors:
         return jsonify({"success": False, "errors": errors}), 400
 
-    complaint.status = data["status"]
+    complaint.status = ComplaintStatusEnum(data["status"])
     complaint.resolution_note = data.get("resolution_note", complaint.resolution_note)
     if data["status"] in (ComplaintStatusEnum.RESOLVED.value, ComplaintStatusEnum.REJECTED.value):
         complaint.resolved_at = datetime.utcnow()
